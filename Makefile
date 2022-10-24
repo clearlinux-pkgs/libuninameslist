@@ -1,5 +1,5 @@
 PKG_NAME := libuninameslist
-URL = https://github.com/fontforge/libuninameslist/archive/20211114/libuninameslist-20211114.tar.gz
+URL = https://github.com/fontforge/libuninameslist/archive/20221022/libuninameslist-20221022.tar.gz
 ARCHIVES = 
 
 include ../common/Makefile.common
