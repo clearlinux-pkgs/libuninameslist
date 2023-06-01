@@ -5,7 +5,7 @@
 #
 Name     : libuninameslist
 Version  : 20230523
-Release  : 9
+Release  : 10
 URL      : https://github.com/fontforge/libuninameslist/archive/20230523/libuninameslist-20230523.tar.gz
 Source0  : https://github.com/fontforge/libuninameslist/archive/20230523/libuninameslist-20230523.tar.gz
 Summary  : Unicode Names and Annotations List Library (NamesList.txt=@NL_VERSION@)
@@ -64,7 +64,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1684863159
+export SOURCE_DATE_EPOCH=1685635816
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -96,7 +96,7 @@ cd ../buildavx2;
 make %{?_smp_mflags} check || :
 
 %install
-export SOURCE_DATE_EPOCH=1684863159
+export SOURCE_DATE_EPOCH=1685635816
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/libuninameslist
 cp %{_builddir}/libuninameslist-%{version}/COPYING %{buildroot}/usr/share/package-licenses/libuninameslist/e9cf76556aab3f1d3c2a70d8c96bceb4a681ebe3 || :
@@ -112,7 +112,6 @@ popd
 
 %files dev
 %defattr(-,root,root,-)
-/V3/usr/lib64/libuninameslist.so
 /usr/include/uninameslist.h
 /usr/lib64/libuninameslist.so
 /usr/lib64/pkgconfig/libuninameslist.pc
@@ -120,7 +119,6 @@ popd
 
 %files lib
 %defattr(-,root,root,-)
-/V3/usr/lib64/libuninameslist.so.1
 /V3/usr/lib64/libuninameslist.so.1.0.13
 /usr/lib64/libuninameslist.so.1
 /usr/lib64/libuninameslist.so.1.0.13
