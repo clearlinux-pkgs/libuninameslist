@@ -4,10 +4,10 @@
 # Using build pattern: configure_ac
 #
 Name     : libuninameslist
-Version  : 20230523
-Release  : 11
-URL      : https://github.com/fontforge/libuninameslist/archive/20230523/libuninameslist-20230523.tar.gz
-Source0  : https://github.com/fontforge/libuninameslist/archive/20230523/libuninameslist-20230523.tar.gz
+Version  : 20230916
+Release  : 12
+URL      : https://github.com/fontforge/libuninameslist/archive/20230916/libuninameslist-20230916.tar.gz
+Source0  : https://github.com/fontforge/libuninameslist/archive/20230916/libuninameslist-20230916.tar.gz
 Summary  : Unicode Names and Annotations List Library (NamesList.txt=@NL_VERSION@)
 Group    : Development/Tools
 License  : BSD-3-Clause GPL-2.0
@@ -53,10 +53,10 @@ license components for the libuninameslist package.
 
 
 %prep
-%setup -q -n libuninameslist-20230523
-cd %{_builddir}/libuninameslist-20230523
+%setup -q -n libuninameslist-20230916
+cd %{_builddir}/libuninameslist-20230916
 pushd ..
-cp -a libuninameslist-20230523 buildavx2
+cp -a libuninameslist-20230916 buildavx2
 popd
 
 %build
@@ -64,7 +64,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1685645402
+export SOURCE_DATE_EPOCH=1695052702
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -96,7 +96,7 @@ cd ../buildavx2;
 make %{?_smp_mflags} check || :
 
 %install
-export SOURCE_DATE_EPOCH=1685645402
+export SOURCE_DATE_EPOCH=1695052702
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/libuninameslist
 cp %{_builddir}/libuninameslist-%{version}/COPYING %{buildroot}/usr/share/package-licenses/libuninameslist/e9cf76556aab3f1d3c2a70d8c96bceb4a681ebe3 || :
@@ -119,9 +119,9 @@ popd
 
 %files lib
 %defattr(-,root,root,-)
-/V3/usr/lib64/libuninameslist.so.1.0.13
+/V3/usr/lib64/libuninameslist.so.1.0.14
 /usr/lib64/libuninameslist.so.1
-/usr/lib64/libuninameslist.so.1.0.13
+/usr/lib64/libuninameslist.so.1.0.14
 
 %files license
 %defattr(0644,root,root,0755)
